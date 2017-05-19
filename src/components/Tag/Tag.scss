@@ -1,0 +1,13 @@
+@import "../../utilities/palette";
+
+.tag {
+  display: flex;
+  padding: 5px;
+  margin: 2px;
+  background-color: $primary-color;
+  border-radius: 2px;
+  color: #FFF;
+  font-family: 'Avenir Next', sans-serif;
+  font-size: 12px;
+  font-weight: 300;
+}

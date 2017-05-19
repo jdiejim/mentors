@@ -1,0 +1,12 @@
+.tag {
+  display: flex;
+  padding: 5px;
+  margin: 2px;
+  background-color: #673AB7;
+  border-radius: 2px;
+  color: #FFF;
+  font-family: 'Avenir Next', sans-serif;
+  font-size: 12px;
+  font-weight: 300; }
+
+/*# sourceMappingURL=Tag.css.map */

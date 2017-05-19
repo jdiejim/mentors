@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
+import './Tag.css';
 
 class Tag extends Component {
   render() {
     return (
-      <li>{this.props.tag}</li>
+      <div className='tag'>
+        {this.props.tag}
+      </div>
     )
   }
 }
