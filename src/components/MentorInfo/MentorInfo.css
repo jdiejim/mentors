@@ -1,0 +1,18 @@
+.mentor-info {
+  display: flex;
+  justify-content: space-between;
+  width: 95%;
+  height: 50%;
+  padding: 10px;
+  margin: 0 auto; }
+  .mentor-info h1 {
+    margin: 0;
+    color: #212121;
+    font-size: 25px;
+    font-weight: 300; }
+  .mentor-info p {
+    margin: 0;
+    color: #757575;
+    font-size: 14px; }
+
+/*# sourceMappingURL=MentorInfo.css.map */

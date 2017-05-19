@@ -8,13 +8,6 @@ let array = MENTORS.map((mentor, i) => {
   return <Card key={i} mentor={new Mentor(mentor)}/>;
 })
 
-// let filterd = array.filter(e => {
-//   return e.props.mentor.tags.includes('Ruby/Rails')
-// })
-
-// console.log(filterd);
-// console.log(array[0].props.mentor.tags.includes('Ruby/Rails'));
-// console.log(array);
 class App extends Component {
   constructor() {
     super();
@@ -24,16 +17,12 @@ class App extends Component {
     }
   }
 
-  getSearchValue(event) {
-    let search = event.target.value.toLowerCase();
-
-  }
-
   search(event) {
-    let searchValue = event.target.value.toLowerCase().split(' ');
-    console.log(searchValue);
+    let searchValue = event.target.value.toLowerCase();
     let filteredArray = [...array].filter(e => {
-      return e.props.mentor.technical.toLowerCase().includes(searchValue)
+      let { name, location, technical } = e.props.mentor;
+      let elements = `${name.toLowerCase()} ${location.toLowerCase()} ${technical.toLowerCase()}`;
+      return elements.includes(searchValue)
     });
 
     let newArray = filteredArray;
@@ -41,6 +30,7 @@ class App extends Component {
     if (searchValue === '') {
       newArray = array;
     }
+
     this.setState({
       mentors: newArray
     })
@@ -50,10 +40,9 @@ class App extends Component {
     return (
       <div className='App'>
         <form>
-          <input onKeyUp={this.search.bind(this)} ref='search' />
-          <button>Search</button>
+          <input onKeyUp={ this.search.bind(this) } ref='search' placeholder='Search tag, name, or location'/>
         </form>
-        <MentorList list={this.state.mentors} />
+        <MentorList list={ this.state.mentors } />
       </div>
     );
   }

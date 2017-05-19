@@ -6,7 +6,7 @@ class TagList extends Component {
   render() {
     return (
       <section className='tag-list'>
-    { this.props.tags.map((e, i) => <Tag key={i} tag={e} />) }
+        { this.props.tags.map((e, i) => <Tag key={i} tag={e} />) }
       </section>
     )
   }
